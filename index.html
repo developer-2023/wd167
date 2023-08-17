@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            coertion - implicite / automatic type conversion
+        */
+
+        // explicit conversion
+        let txt1 = String(123.456);
+        console.log(typeof txt1, txt1); // 123.456
+
+        let num1 = parseInt("123.456");
+        console.log(typeof num1, num1); // 123
+
+        let num2 = parseFloat("123.456");
+        console.log(typeof num2, num2); // 123.456
+
+        // implicit conversion
+        let txt2 = "123" + 123;
+        console.log(typeof txt2, txt2); // 123123
+
+        let num3 = -"123" + 123;
+        console.log(typeof num3, num3); // 0
+
+        if ("false") {console.log(true);} else {console.log(false);} // true
+        if ("") {console.log(true);} else {console.log(false);} // false
+        if (0) {console.log(true);} else {console.log(false);} // false
+        if (!0) {console.log(true);} else {console.log(false);} // true
+        if ({}) {console.log(true);} else {console.log(false);} // true
+    
+    </script>
+</body>
+</html>
